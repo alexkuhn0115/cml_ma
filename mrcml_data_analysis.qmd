@@ -1,0 +1,21 @@
+---
+title: "MRcML Results"
+author: "Alex Kuhn"
+format: html
+---
+
+### Plan
+Here we will first reproduce the results from the data analysis in the MRcML paper in order to identify possible causal effects of 12 risk factors on three cardiometabolic diseases - coronary artery disease (CAD), stroke, and type 2 diabetes (T2D) - plus asthma largely as a negative control. These 12 risk factors (and their corresponding GWASs) are LDL cholesterol, HDL cholesterol, triglycerides (TG), drinks per week (alcohol), ever regular smoker (smoke), body fat percentage (BF), birth weight (BW), body mass index (BMI),  height, fasting glucose (FG), systolic blood pressure (SBP), and diastolic blood pressure (DBP). See paper (pg. 9) for information on sample sizes. 
+
+For each risk factor/exposure-disease/outcome pair, we used the set of LD-independent SNPs as IVs as described in Morrison et al. using the groupings of (likely causal), correlated, unrelated, and non-causal. In particular, I would like to reproduce results to create Figure 8 and Figure 9 here (without running CAUSAL for now) adding perhaps MR-Lasso and MR-PRESSO results. 
+
+### Data Processing
+
+
+### Possible Next Steps
+
+There are a ton of results that I could reproduce here. Some that seem particularly helpful:
+
+  * It would be a good idea to reproduce the results in Table 1 and 2 in the supplementary materials (which has many more methods than above). After that, it would be a good idea to run the two GOF tests in some cases. 
+  * Worth time to reproduce simulation results? At least think about setup. 
+  * Some thoughts for _new_ simulations/analyses if time permits: high dimensional setting (some results using profile likelihood), taking a data set with known population stratification issues and getting results, or simulating to see effect of post-selection inference carried out here in the GWAS analyses. 
