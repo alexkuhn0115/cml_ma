@@ -153,754 +153,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="cell-output cell-output-stderr">
 <pre><code>Harmonising Body mass index || id:ieu-a-2 (ieu-a-2) and Coronary heart disease || id:ieu-a-7 (ieu-a-7)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>dat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>          SNP effect_allele.exposure other_allele.exposure
-1   rs1000940                      G                     A
-2  rs10132280                      A                     C
-3   rs1016287                      C                     T
-4  rs10182181                      G                     A
-5  rs10733682                      G                     A
-6  rs10840100                      G                     A
-7  rs11030104                      G                     A
-8  rs11057405                      A                     G
-9  rs11165643                      T                     C
-10 rs11672660                      T                     C
-11  rs1167827                      G                     A
-12 rs11727676                      C                     T
-13 rs12286929                      G                     A
-14 rs12429545                      A                     G
-15 rs12448257                      A                     G
-16 rs12940622                      A                     G
-17 rs12986742                      C                     T
-18 rs13021737                      G                     A
-19 rs13078960                      G                     T
-20 rs13107325                      T                     C
-21 rs13130484                      T                     C
-22 rs13191362                      G                     A
-23 rs13201877                      G                     A
-24 rs13329567                      T                     C
-25  rs1421085                      C                     T
-26  rs1441264                      A                     G
-27  rs1460676                      C                     T
-28    rs14810                      G                     C
-29  rs1516725                      C                     T
-30  rs1528435                      T                     C
-31 rs16851483                      T                     G
-32 rs17001654                      G                     C
-33 rs17066856                      C                     T
-34 rs17094222                      C                     T
-35 rs17203016                      G                     A
-36 rs17381664                      C                     T
-37 rs17724992                      G                     A
-38  rs1928295                      C                     T
-39  rs2033529                      G                     A
-40  rs2060604                      C                     T
-41  rs2112347                      G                     T
-42  rs2176598                      C                     T
-43  rs2183825                      C                     T
-44  rs2365389                      T                     C
-45  rs2820292                      C                     A
-46  rs2836754                      C                     T
-47  rs2890652                      C                     T
-48  rs3736485                      G                     A
-49  rs3800229                      T                     G
-50  rs3817334                      T                     C
-51  rs3849570                      A                     C
-52  rs3888190                      A                     C
-53  rs4740619                      C                     T
-54  rs4889606                      G                     A
-55   rs543874                      G                     A
-56  rs6091540                      T                     C
-57  rs6457796                      C                     T
-58  rs6477694                      T                     C
-59  rs6567160                      C                     T
-60   rs657452                      G                     A
-61  rs6713510                      A                     G
-62  rs6804842                      G                     A
-63  rs7138803                      A                     G
-64  rs7144011                      T                     G
-65  rs7531118                      C                     T
-66  rs7550711                      T                     C
-67  rs7599312                      A                     G
-68  rs7715256                      T                     G
-69  rs7899106                      G                     A
-70  rs7903146                      T                     C
-71   rs879620                      T                     C
-72   rs891389                      T                     C
-73  rs9304665                      A                     T
-74  rs9374842                      T                     C
-75   rs943005                      T                     C
-76  rs9540493                      G                     A
-77  rs9579083                      C                     G
-78   rs977747                      G                     T
-79  rs9926784                      C                     T
-   effect_allele.outcome other_allele.outcome beta.exposure beta.outcome
-1                      G                    A        0.0184    -0.014538
-2                      A                    C       -0.0221    -0.012169
-3                      C                    T       -0.0228    -0.014087
-4                      G                    A        0.0309     0.018295
-5                      G                    A       -0.0188    -0.004541
-6                      G                    A        0.0206     0.014599
-7                      G                    A       -0.0416    -0.027672
-8                      A                    G       -0.0304     0.013737
-9                      T                    C        0.0221     0.005150
-10                     T                    C       -0.0339    -0.038968
-11                     G                    A        0.0200     0.011586
-12                     C                    T       -0.0365     0.036454
-13                     G                    A        0.0211     0.001802
-14                     A                    G        0.0324     0.010619
-15                     A                    G        0.0246     0.009661
-16                     A                    G       -0.0183    -0.016270
-17                     C                    T        0.0207     0.008220
-18                     G                    A        0.0604     0.037025
-19                     G                    T        0.0290    -0.020015
-20                     T                    C        0.0472    -0.006670
-21                     T                    C        0.0398     0.030987
-22                     G                    A       -0.0285    -0.036681
-23                     G                    A        0.0236     0.029827
-24                     T                    C       -0.0307    -0.014147
-25                     C                    T        0.0803     0.029660
-26                     A                    G        0.0172     0.005096
-27                     C                    T        0.0209    -0.003793
-28                     G                    C        0.0183     0.002340
-29                     C                    T        0.0448     0.008179
-30                     T                    C        0.0175     0.018036
-31                     T                    G        0.0478     0.014404
-32                     G                    C        0.0304     0.019185
-33                     C                    T       -0.0371    -0.037871
-34                     C                    T        0.0249     0.003571
-35                     G                    A        0.0211     0.020352
-36                     C                    T        0.0201     0.016188
-37                     G                    A       -0.0196    -0.013899
-38                     C                    T       -0.0182    -0.006674
-39                     G                    A        0.0183    -0.006297
-40                     C                    T       -0.0203    -0.019358
-41                     G                    T       -0.0254    -0.005855
-42                     C                    T       -0.0185    -0.026064
-43                     C                    T        0.0241     0.022607
-44                     T                    C       -0.0195    -0.014975
-45                     C                    A        0.0181     0.017948
-46                     C                    T        0.0169    -0.007723
-47                     C                    T        0.0279     0.004026
-48                     G                    A       -0.0160     0.001591
-49                     T                    G        0.0175     0.003892
-50                     T                    C        0.0256     0.000355
-51                     A                    C        0.0183     0.028293
-52                     A                    C        0.0311     0.019161
-53                     C                    T       -0.0170    -0.006546
-54                     G                    A       -0.0187    -0.006668
-55                     G                    A        0.0497     0.007600
-56                     T                    C       -0.0185    -0.002356
-57                     C                    T        0.0209     0.033698
-58                     T                    C       -0.0169    -0.006108
-59                     C                    T        0.0562     0.057739
-60                     G                    A       -0.0227    -0.007670
-61                     A                    G        0.0164    -0.037794
-62                     G                    A        0.0183     0.009940
-63                     A                    G        0.0320     0.008175
-64                     T                    G        0.0274     0.021424
-65                     C                    T        0.0331     0.017675
-66                     T                    C        0.0659    -0.048354
-67                     A                    G       -0.0214    -0.026653
-68                     T                    G       -0.0168    -0.002363
-69                     G                    A        0.0379    -0.006811
-70                     T                    C       -0.0235     0.033092
-71                     T                    C        0.0244    -0.002940
-72                     T                    C        0.0209     0.025213
-73                     A                    T        0.0243     0.033171
-74                     T                    C        0.0196     0.013555
-75                     T                    C        0.0444     0.017756
-76                     G                    A       -0.0182    -0.005837
-77                     C                    G        0.0295     0.024113
-78                     G                    T       -0.0168    -0.013896
-79                     C                    T       -0.0249     0.003405
-   eaf.exposure eaf.outcome remove palindromic ambiguous id.outcome chr
-1        0.2250    0.337103  FALSE       FALSE     FALSE    ieu-a-7  17
-2        0.3333    0.282164  FALSE       FALSE     FALSE    ieu-a-7  14
-3        0.6750    0.699031  FALSE       FALSE     FALSE    ieu-a-7   2
-4        0.5000    0.473525  FALSE       FALSE     FALSE    ieu-a-7   2
-5        0.5750    0.491116  FALSE       FALSE     FALSE    ieu-a-7   9
-6        0.7250    0.607618  FALSE       FALSE     FALSE    ieu-a-7  11
-7        0.2000    0.221599  FALSE       FALSE     FALSE    ieu-a-7  11
-8        0.0917    0.081810  FALSE       FALSE     FALSE    ieu-a-7  12
-9        0.5750    0.553284  FALSE       FALSE     FALSE    ieu-a-7   1
-10       0.1750    0.195245  FALSE       FALSE     FALSE    ieu-a-7  19
-11       0.5417    0.556453  FALSE       FALSE     FALSE    ieu-a-7   7
-12       0.0750    0.075365  FALSE       FALSE     FALSE    ieu-a-7   4
-13       0.4333    0.499787  FALSE       FALSE     FALSE    ieu-a-7  11
-14       0.1000    0.144688  FALSE       FALSE     FALSE    ieu-a-7  13
-15       0.2250    0.224463  FALSE       FALSE     FALSE    ieu-a-7  16
-16       0.4583    0.409739  FALSE       FALSE     FALSE    ieu-a-7  17
-17       0.5000    0.464803  FALSE       FALSE     FALSE    ieu-a-7   2
-18       0.8750    0.803169  FALSE       FALSE     FALSE    ieu-a-7   2
-19       0.1833    0.181437  FALSE       FALSE     FALSE    ieu-a-7   3
-20       0.1167    0.061282  FALSE       FALSE     FALSE    ieu-a-7   4
-21       0.4333    0.415571  FALSE       FALSE     FALSE    ieu-a-7   4
-22       0.2000    0.111976  FALSE       FALSE     FALSE    ieu-a-7   6
-23       0.0833    0.124409  FALSE       FALSE     FALSE    ieu-a-7   6
-24       0.2167    0.256185  FALSE       FALSE     FALSE    ieu-a-7  15
-25       0.4500    0.379988  FALSE       FALSE     FALSE    ieu-a-7  16
-26       0.5500    0.614899  FALSE       FALSE     FALSE    ieu-a-7  13
-27       0.2167    0.183900  FALSE       FALSE     FALSE    ieu-a-7   2
-28       0.6750    0.640144  FALSE        TRUE     FALSE    ieu-a-7  19
-29       0.9083    0.837072  FALSE       FALSE     FALSE    ieu-a-7   3
-30       0.5833    0.620360  FALSE       FALSE     FALSE    ieu-a-7   2
-31       0.0917    0.083040  FALSE       FALSE     FALSE    ieu-a-7   3
-32       0.1583    0.141388  FALSE        TRUE     FALSE    ieu-a-7   4
-33       0.1333    0.105474  FALSE       FALSE     FALSE    ieu-a-7  18
-34       0.2083    0.204454  FALSE       FALSE     FALSE    ieu-a-7  10
-35       0.2000    0.186737  FALSE       FALSE     FALSE    ieu-a-7   2
-36       0.4250    0.349349  FALSE       FALSE     FALSE    ieu-a-7   1
-37       0.3083    0.293771  FALSE       FALSE     FALSE    ieu-a-7  19
-38       0.4250    0.436964  FALSE       FALSE     FALSE    ieu-a-7   9
-39       0.2583    0.266180  FALSE       FALSE     FALSE    ieu-a-7   6
-40       0.4417    0.447555  FALSE       FALSE     FALSE    ieu-a-7   8
-41       0.3750    0.401399  FALSE       FALSE     FALSE    ieu-a-7   5
-42       0.8000    0.734895  FALSE       FALSE     FALSE    ieu-a-7  11
-43       0.2917    0.307927  FALSE       FALSE     FALSE    ieu-a-7   9
-44       0.3417    0.449327  FALSE       FALSE     FALSE    ieu-a-7   3
-45       0.5083    0.528889  FALSE       FALSE     FALSE    ieu-a-7   1
-46       0.6500    0.544754  FALSE       FALSE     FALSE    ieu-a-7  21
-47       0.1250    0.162341  FALSE       FALSE     FALSE    ieu-a-7   2
-48       0.5750    0.502460  FALSE       FALSE     FALSE    ieu-a-7  15
-49       0.6917    0.653147  FALSE       FALSE     FALSE    ieu-a-7   6
-50       0.4500    0.387831  FALSE       FALSE     FALSE    ieu-a-7  11
-51       0.3667    0.356589  FALSE       FALSE     FALSE    ieu-a-7   3
-52       0.3583    0.348981  FALSE       FALSE     FALSE    ieu-a-7  16
-53       0.4667    0.467784  FALSE       FALSE     FALSE    ieu-a-7   9
-54       0.3583    0.377963  FALSE       FALSE     FALSE    ieu-a-7  16
-55       0.2667    0.189189  FALSE       FALSE     FALSE    ieu-a-7   1
-56       0.2750    0.277147  FALSE       FALSE     FALSE    ieu-a-7  20
-57       0.2583    0.271472  FALSE       FALSE     FALSE    ieu-a-7   6
-58       0.6417    0.593079  FALSE       FALSE     FALSE    ieu-a-7   9
-59       0.2833    0.254306  FALSE       FALSE     FALSE    ieu-a-7  18
-60       0.5833    0.566124  FALSE       FALSE     FALSE    ieu-a-7   1
-61       0.4833    0.485903  FALSE       FALSE     FALSE    ieu-a-7   2
-62       0.5750    0.550150  FALSE       FALSE     FALSE    ieu-a-7   3
-63       0.4417    0.371503  FALSE       FALSE     FALSE    ieu-a-7  12
-64       0.2750    0.202625  FALSE       FALSE     FALSE    ieu-a-7  14
-65       0.6083    0.480633  FALSE       FALSE     FALSE    ieu-a-7   1
-66       0.0339    0.027650  FALSE       FALSE     FALSE    ieu-a-7   1
-67       0.2917    0.247385  FALSE       FALSE     FALSE    ieu-a-7   2
-68       0.5500    0.535469  FALSE       FALSE     FALSE    ieu-a-7   5
-69       0.0500    0.046115  FALSE       FALSE     FALSE    ieu-a-7  10
-70       0.2500    0.275894  FALSE       FALSE     FALSE    ieu-a-7  10
-71       0.5917    0.545251  FALSE       FALSE     FALSE    ieu-a-7  16
-72       0.3250    0.311762  FALSE       FALSE     FALSE    ieu-a-7  18
-73       0.7000    0.689503  FALSE        TRUE     FALSE    ieu-a-7  19
-74       0.7417    0.723965  FALSE       FALSE     FALSE    ieu-a-7   6
-75       0.1000    0.181812  FALSE       FALSE     FALSE    ieu-a-7   6
-76       0.5500    0.525215  FALSE       FALSE     FALSE    ieu-a-7  13
-77       0.2333    0.171036  FALSE        TRUE     FALSE    ieu-a-7  13
-78       0.5333    0.550761  FALSE       FALSE     FALSE    ieu-a-7   1
-79       0.2083    0.216750  FALSE       FALSE     FALSE    ieu-a-7  16
-         pos se.outcome samplesize.outcome pval.outcome
-1    5283252  0.0098395             184305  1.39538e-01
-2   25928179  0.0106640             184305  2.53816e-01
-3   59305625  0.0105738             184305  1.82778e-01
-4   25150296  0.0092790             184305  4.86486e-02
-5  129460914  0.0095245             184305  6.33525e-01
-6    8669437  0.0095234             184305  1.25286e-01
-7   27684517  0.0109855             184305  1.17704e-02
-8  122781897  0.0191598             184305  4.73392e-01
-9   96924097  0.0092844             184305  5.79105e-01
-10  46180184  0.0125585             184305  1.91620e-03
-11  75163169  0.0098352             184305  2.38789e-01
-12 145659064  0.0202080             184305  7.12410e-02
-13 115022404  0.0094202             184305  8.48298e-01
-14  54102206  0.0129343             184305  4.11649e-01
-15   3599655  0.0113483             184305  3.94595e-01
-16  78615571  0.0094539             184305  8.52531e-02
-17  58975143  0.0093952             184305  3.81621e-01
-18    632348  0.0124444             184305  2.92772e-03
-19  85807590  0.0126160             184305  1.12632e-01
-20 103188709  0.0223469             184305  7.65341e-01
-21  45175691  0.0093463             184305  9.15103e-04
-22 163033350  0.0152568             184305  1.62062e-02
-23 137675541  0.0143280             184305  3.73672e-02
-24  68104367  0.0106879             184305  1.85620e-01
-25  53800954  0.0096277             184305  2.06509e-03
-26  79580919  0.0096603             184305  5.97832e-01
-27 164567689  0.0122576             184305  7.56986e-01
-28  34304903  0.0099699             184305  8.14436e-01
-29 185824004  0.0137697             184305  5.52521e-01
-30 181550962  0.0097863             184305  6.53311e-02
-31 141275436  0.0164441             184305  3.81063e-01
-32  77129568  0.0138718             184305  1.66657e-01
-33  58049656  0.0154925             184305  1.45064e-02
-34 102395440  0.0116601             184305  7.59408e-01
-35 208255518  0.0122315             184305  9.61324e-02
-36  78048331  0.0102099             184305  1.12849e-01
-37  18454825  0.0102186             184305  1.73778e-01
-38 120378483  0.0092095             184305  4.68643e-01
-39  40348653  0.0104609             184305  5.47202e-01
-40  76650334  0.0092116             184305  3.55992e-02
-41  75015242  0.0096581             184305  5.44364e-01
-42  43864278  0.0111278             184305  1.91686e-02
-43  28412375  0.0100035             184305  2.38276e-02
-44  61236462  0.0096038             184305  1.18930e-01
-45 201784287  0.0092888             184305  5.33310e-02
-46  40291740  0.0095191             184305  4.17181e-01
-47 142959931  0.0136382             184305  7.67840e-01
-48  51748610  0.0095777             184305  8.68067e-01
-49 108996963  0.0098840             184305  6.93753e-01
-50  47650993  0.0095386             184305  9.70312e-01
-51  81792112  0.0096396             184305  3.33472e-03
-52  28889486  0.0101002             184305  5.78163e-02
-53  15634326  0.0092497             184305  4.79131e-01
-54  31011183  0.0102697             184305  5.16151e-01
-55 177889480  0.0117296             184305  5.17029e-01
-56  51087862  0.0101524             184305  8.16488e-01
-57  34828553  0.0106292             184305  1.52268e-03
-58 111932342  0.0094180             184305  5.16634e-01
-59  57829135  0.0105597             184305  4.55995e-08
-60  49589847  0.0093844             184305  4.13747e-01
-61 227034499  0.0095125             184305  7.10003e-05
-62  25106437  0.0092649             184305  2.83329e-01
-63  50247468  0.0094745             184305  3.88225e-01
-64  79940383  0.0120707             184305  7.59189e-02
-65  72837239  0.0097331             184305  6.93745e-02
-66 110082886  0.0305635             184305  1.13631e-01
-67 213413231  0.0111930             184305  1.72556e-02
-68 153537893  0.0095842             184305  8.05256e-01
-69  87410904  0.0233702             184305  7.70715e-01
-70 114758349  0.0103902             184305  1.44800e-03
-71   4015729  0.0097320             184305  7.62578e-01
-72  21087531  0.0101654             184305  1.31280e-02
-73  47602577  0.0106390             184305  1.82171e-03
-74 120185665  0.0106053             184305  2.01203e-01
-75  50865820  0.0117188             184305  1.29728e-01
-76  66205704  0.0095006             184305  5.38962e-01
-77  28017270  0.0125889             184305  5.54383e-02
-78  47684677  0.0096146             184305  1.48375e-01
-79  19941968  0.0112940             184305  7.63043e-01
-                                outcome   originalname.outcome
-1  Coronary heart disease || id:ieu-a-7 Coronary heart disease
-2  Coronary heart disease || id:ieu-a-7 Coronary heart disease
-3  Coronary heart disease || id:ieu-a-7 Coronary heart disease
-4  Coronary heart disease || id:ieu-a-7 Coronary heart disease
-5  Coronary heart disease || id:ieu-a-7 Coronary heart disease
-6  Coronary heart disease || id:ieu-a-7 Coronary heart disease
-7  Coronary heart disease || id:ieu-a-7 Coronary heart disease
-8  Coronary heart disease || id:ieu-a-7 Coronary heart disease
-9  Coronary heart disease || id:ieu-a-7 Coronary heart disease
-10 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-11 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-12 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-13 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-14 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-15 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-16 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-17 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-18 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-19 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-20 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-21 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-22 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-23 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-24 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-25 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-26 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-27 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-28 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-29 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-30 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-31 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-32 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-33 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-34 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-35 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-36 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-37 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-38 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-39 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-40 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-41 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-42 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-43 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-44 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-45 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-46 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-47 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-48 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-49 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-50 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-51 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-52 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-53 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-54 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-55 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-56 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-57 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-58 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-59 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-60 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-61 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-62 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-63 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-64 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-65 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-66 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-67 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-68 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-69 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-70 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-71 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-72 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-73 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-74 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-75 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-76 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-77 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-78 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-79 Coronary heart disease || id:ieu-a-7 Coronary heart disease
-               outcome.deprecated mr_keep.outcome data_source.outcome
-1  Coronary heart disease ||  ||             TRUE                 igd
-2  Coronary heart disease ||  ||             TRUE                 igd
-3  Coronary heart disease ||  ||             TRUE                 igd
-4  Coronary heart disease ||  ||             TRUE                 igd
-5  Coronary heart disease ||  ||             TRUE                 igd
-6  Coronary heart disease ||  ||             TRUE                 igd
-7  Coronary heart disease ||  ||             TRUE                 igd
-8  Coronary heart disease ||  ||             TRUE                 igd
-9  Coronary heart disease ||  ||             TRUE                 igd
-10 Coronary heart disease ||  ||             TRUE                 igd
-11 Coronary heart disease ||  ||             TRUE                 igd
-12 Coronary heart disease ||  ||             TRUE                 igd
-13 Coronary heart disease ||  ||             TRUE                 igd
-14 Coronary heart disease ||  ||             TRUE                 igd
-15 Coronary heart disease ||  ||             TRUE                 igd
-16 Coronary heart disease ||  ||             TRUE                 igd
-17 Coronary heart disease ||  ||             TRUE                 igd
-18 Coronary heart disease ||  ||             TRUE                 igd
-19 Coronary heart disease ||  ||             TRUE                 igd
-20 Coronary heart disease ||  ||             TRUE                 igd
-21 Coronary heart disease ||  ||             TRUE                 igd
-22 Coronary heart disease ||  ||             TRUE                 igd
-23 Coronary heart disease ||  ||             TRUE                 igd
-24 Coronary heart disease ||  ||             TRUE                 igd
-25 Coronary heart disease ||  ||             TRUE                 igd
-26 Coronary heart disease ||  ||             TRUE                 igd
-27 Coronary heart disease ||  ||             TRUE                 igd
-28 Coronary heart disease ||  ||             TRUE                 igd
-29 Coronary heart disease ||  ||             TRUE                 igd
-30 Coronary heart disease ||  ||             TRUE                 igd
-31 Coronary heart disease ||  ||             TRUE                 igd
-32 Coronary heart disease ||  ||             TRUE                 igd
-33 Coronary heart disease ||  ||             TRUE                 igd
-34 Coronary heart disease ||  ||             TRUE                 igd
-35 Coronary heart disease ||  ||             TRUE                 igd
-36 Coronary heart disease ||  ||             TRUE                 igd
-37 Coronary heart disease ||  ||             TRUE                 igd
-38 Coronary heart disease ||  ||             TRUE                 igd
-39 Coronary heart disease ||  ||             TRUE                 igd
-40 Coronary heart disease ||  ||             TRUE                 igd
-41 Coronary heart disease ||  ||             TRUE                 igd
-42 Coronary heart disease ||  ||             TRUE                 igd
-43 Coronary heart disease ||  ||             TRUE                 igd
-44 Coronary heart disease ||  ||             TRUE                 igd
-45 Coronary heart disease ||  ||             TRUE                 igd
-46 Coronary heart disease ||  ||             TRUE                 igd
-47 Coronary heart disease ||  ||             TRUE                 igd
-48 Coronary heart disease ||  ||             TRUE                 igd
-49 Coronary heart disease ||  ||             TRUE                 igd
-50 Coronary heart disease ||  ||             TRUE                 igd
-51 Coronary heart disease ||  ||             TRUE                 igd
-52 Coronary heart disease ||  ||             TRUE                 igd
-53 Coronary heart disease ||  ||             TRUE                 igd
-54 Coronary heart disease ||  ||             TRUE                 igd
-55 Coronary heart disease ||  ||             TRUE                 igd
-56 Coronary heart disease ||  ||             TRUE                 igd
-57 Coronary heart disease ||  ||             TRUE                 igd
-58 Coronary heart disease ||  ||             TRUE                 igd
-59 Coronary heart disease ||  ||             TRUE                 igd
-60 Coronary heart disease ||  ||             TRUE                 igd
-61 Coronary heart disease ||  ||             TRUE                 igd
-62 Coronary heart disease ||  ||             TRUE                 igd
-63 Coronary heart disease ||  ||             TRUE                 igd
-64 Coronary heart disease ||  ||             TRUE                 igd
-65 Coronary heart disease ||  ||             TRUE                 igd
-66 Coronary heart disease ||  ||             TRUE                 igd
-67 Coronary heart disease ||  ||             TRUE                 igd
-68 Coronary heart disease ||  ||             TRUE                 igd
-69 Coronary heart disease ||  ||             TRUE                 igd
-70 Coronary heart disease ||  ||             TRUE                 igd
-71 Coronary heart disease ||  ||             TRUE                 igd
-72 Coronary heart disease ||  ||             TRUE                 igd
-73 Coronary heart disease ||  ||             TRUE                 igd
-74 Coronary heart disease ||  ||             TRUE                 igd
-75 Coronary heart disease ||  ||             TRUE                 igd
-76 Coronary heart disease ||  ||             TRUE                 igd
-77 Coronary heart disease ||  ||             TRUE                 igd
-78 Coronary heart disease ||  ||             TRUE                 igd
-79 Coronary heart disease ||  ||             TRUE                 igd
-   pval.exposure samplesize.exposure chr.exposure se.exposure pos.exposure
-1    1.81201e-08              338903           17      0.0033      5283252
-2    1.40088e-11              338856           14      0.0033     25928179
-3    4.35512e-12              339033            2      0.0033     59305625
-4    8.07049e-26              338829            2      0.0029     25150296
-5    2.45499e-10              336886            9      0.0030    129460914
-6    6.66653e-12              339135           11      0.0030      8669437
-7    6.65733e-30              339035           11      0.0037     27684517
-8    1.22000e-08              328905           12      0.0053    122781897
-9    1.43384e-13              337797            1      0.0030     96924097
-10   7.91043e-19              312079           19      0.0038     46180184
-11   1.97501e-10              323308            7      0.0031     75163169
-12   6.24698e-09              311073            4      0.0063    145659064
-13   5.44252e-13              337453           11      0.0029    115022404
-14   3.15210e-13              330001           13      0.0044     54102206
-15   3.89762e-11              330330           16      0.0037      3599655
-16   3.63597e-10              339097           17      0.0029     78615571
-17   8.92401e-09              235995            2      0.0036     58975143
-18   5.43876e-54              333169            2      0.0039       632348
-19   1.42298e-14              339205            3      0.0038     85807590
-20   1.06390e-12              335619            4      0.0066    103188709
-21   8.01124e-41              338185            4      0.0030     45175691
-22   1.09199e-09              338058            6      0.0047    163033350
-23   4.28499e-08              339026            6      0.0043    137675541
-24   1.52616e-18              338200           15      0.0035     68104367
-25  2.16770e-158              333087           16      0.0030     53800954
-26   2.95903e-08              326858           13      0.0031     79580919
-27   4.97794e-08              339157            2      0.0038    164567689
-28   1.92300e-08              338718           19      0.0033     34304903
-29   1.39412e-24              337708            3      0.0044    185824004
-30   4.77397e-09              338993            2      0.0030    181550962
-31   1.84999e-10              236091            3      0.0075    141275436
-32   5.03095e-09              235884            4      0.0052     77129568
-33   2.00309e-13              336765           18      0.0050     58049656
-34   2.18625e-11              338823           10      0.0037    102395440
-35   3.40596e-08              333383            2      0.0038    208255518
-36   4.56773e-11              339065            1      0.0031     78048331
-37   7.78700e-09              334494           19      0.0034     18454825
-38   4.31797e-10              337265            9      0.0029    120378483
-39   1.44901e-08              338988            6      0.0032     40348653
-40   9.46019e-12              339152            8      0.0030     76650334
-41   1.96020e-17              339082            5      0.0030     75015242
-42   3.46897e-08              333918           11      0.0033     43864278
-43   2.22280e-14              339127            9      0.0032     28412375
-44   1.34602e-10              331668            3      0.0030     61236462
-45   5.45205e-10              338768            1      0.0029    201784287
-46   1.60498e-08              337300           21      0.0030     40291740
-47   1.24200e-08              218359            2      0.0049    142959931
-48   4.52397e-08              338449           15      0.0029     51748610
-49   4.95005e-08              339072            6      0.0032    108996963
-50   1.16788e-17              339006           11      0.0030     47650993
-51   1.93299e-08              294030            3      0.0033     81792112
-52   3.45382e-25              338077           16      0.0030     28889486
-53   6.35594e-09              338930            9      0.0029     15634326
-54   6.58006e-10              338949           16      0.0030     31011183
-55   2.28718e-40              339078            1      0.0037    177889480
-56   2.13801e-08              339045           20      0.0033     51087862
-57   2.53501e-10              337750            6      0.0033     34828553
-58   1.70498e-08              339115            9      0.0030    111932342
-59   6.68344e-59              339006           18      0.0035     57829135
-60   2.12324e-13              318585            1      0.0031     49589847
-61   1.97401e-08              339118            2      0.0029    227034499
-62   8.01604e-10              338525            3      0.0030     25106437
-63   5.11446e-26              339162           12      0.0030     50247468
-64   6.04505e-15              338347           14      0.0035     79940383
-65   1.88018e-28              338123            1      0.0030     72837239
-66   5.05941e-14              313621            1      0.0087    110082886
-67   4.73042e-11              338186            2      0.0033    213413231
-68   8.85095e-09              339153            5      0.0029    153537893
-69   1.26900e-08              338835           10      0.0067     87410904
-70   1.10306e-12              339198           10      0.0033    114758349
-71   3.93904e-10              235997           16      0.0039      4015729
-72   1.61700e-08              236115           18      0.0037     21087531
-73   1.59401e-08              234806           19      0.0043     47602577
-74   7.19797e-09              339068            6      0.0034    120185665
-75   4.52376e-31              339197            6      0.0038     50865820
-76   3.95203e-09              336023           13      0.0031     66205704
-77   1.42600e-10              235969           13      0.0046     28017270
-78   2.18198e-08              339152            1      0.0030     47684677
-79   8.54870e-11              333191           16      0.0038     19941968
-   id.exposure                      exposure mr_keep.exposure
-1      ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-2      ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-3      ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-4      ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-5      ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-6      ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-7      ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-8      ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-9      ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-10     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-11     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-12     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-13     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-14     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-15     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-16     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-17     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-18     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-19     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-20     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-21     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-22     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-23     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-24     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-25     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-26     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-27     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-28     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-29     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-30     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-31     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-32     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-33     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-34     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-35     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-36     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-37     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-38     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-39     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-40     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-41     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-42     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-43     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-44     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-45     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-46     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-47     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-48     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-49     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-50     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-51     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-52     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-53     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-54     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-55     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-56     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-57     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-58     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-59     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-60     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-61     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-62     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-63     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-64     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-65     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-66     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-67     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-68     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-69     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-70     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-71     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-72     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-73     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-74     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-75     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-76     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-77     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-78     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-79     ieu-a-2 Body mass index || id:ieu-a-2             TRUE
-   pval_origin.exposure data_source.exposure action mr_keep
-1              reported                  igd      2    TRUE
-2              reported                  igd      2    TRUE
-3              reported                  igd      2    TRUE
-4              reported                  igd      2    TRUE
-5              reported                  igd      2    TRUE
-6              reported                  igd      2    TRUE
-7              reported                  igd      2    TRUE
-8              reported                  igd      2    TRUE
-9              reported                  igd      2    TRUE
-10             reported                  igd      2    TRUE
-11             reported                  igd      2    TRUE
-12             reported                  igd      2    TRUE
-13             reported                  igd      2    TRUE
-14             reported                  igd      2    TRUE
-15             reported                  igd      2    TRUE
-16             reported                  igd      2    TRUE
-17             reported                  igd      2    TRUE
-18             reported                  igd      2    TRUE
-19             reported                  igd      2    TRUE
-20             reported                  igd      2    TRUE
-21             reported                  igd      2    TRUE
-22             reported                  igd      2    TRUE
-23             reported                  igd      2    TRUE
-24             reported                  igd      2    TRUE
-25             reported                  igd      2    TRUE
-26             reported                  igd      2    TRUE
-27             reported                  igd      2    TRUE
-28             reported                  igd      2    TRUE
-29             reported                  igd      2    TRUE
-30             reported                  igd      2    TRUE
-31             reported                  igd      2    TRUE
-32             reported                  igd      2    TRUE
-33             reported                  igd      2    TRUE
-34             reported                  igd      2    TRUE
-35             reported                  igd      2    TRUE
-36             reported                  igd      2    TRUE
-37             reported                  igd      2    TRUE
-38             reported                  igd      2    TRUE
-39             reported                  igd      2    TRUE
-40             reported                  igd      2    TRUE
-41             reported                  igd      2    TRUE
-42             reported                  igd      2    TRUE
-43             reported                  igd      2    TRUE
-44             reported                  igd      2    TRUE
-45             reported                  igd      2    TRUE
-46             reported                  igd      2    TRUE
-47             reported                  igd      2    TRUE
-48             reported                  igd      2    TRUE
-49             reported                  igd      2    TRUE
-50             reported                  igd      2    TRUE
-51             reported                  igd      2    TRUE
-52             reported                  igd      2    TRUE
-53             reported                  igd      2    TRUE
-54             reported                  igd      2    TRUE
-55             reported                  igd      2    TRUE
-56             reported                  igd      2    TRUE
-57             reported                  igd      2    TRUE
-58             reported                  igd      2    TRUE
-59             reported                  igd      2    TRUE
-60             reported                  igd      2    TRUE
-61             reported                  igd      2    TRUE
-62             reported                  igd      2    TRUE
-63             reported                  igd      2    TRUE
-64             reported                  igd      2    TRUE
-65             reported                  igd      2    TRUE
-66             reported                  igd      2    TRUE
-67             reported                  igd      2    TRUE
-68             reported                  igd      2    TRUE
-69             reported                  igd      2    TRUE
-70             reported                  igd      2    TRUE
-71             reported                  igd      2    TRUE
-72             reported                  igd      2    TRUE
-73             reported                  igd      2    TRUE
-74             reported                  igd      2    TRUE
-75             reported                  igd      2    TRUE
-76             reported                  igd      2    TRUE
-77             reported                  igd      2    TRUE
-78             reported                  igd      2    TRUE
-79             reported                  igd      2    TRUE</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform MR</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">mr</span>(dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Perform MR</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>res <span class="ot">&lt;-</span> <span class="fu">mr</span>(dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Analysing 'ieu-a-2' on 'ieu-a-7'</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>res</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>  id.exposure id.outcome                              outcome
-1     ieu-a-2    ieu-a-7 Coronary heart disease || id:ieu-a-7
-2     ieu-a-2    ieu-a-7 Coronary heart disease || id:ieu-a-7
-3     ieu-a-2    ieu-a-7 Coronary heart disease || id:ieu-a-7
-4     ieu-a-2    ieu-a-7 Coronary heart disease || id:ieu-a-7
-5     ieu-a-2    ieu-a-7 Coronary heart disease || id:ieu-a-7
-                       exposure                    method nsnp         b
-1 Body mass index || id:ieu-a-2                  MR Egger   79 0.5024935
-2 Body mass index || id:ieu-a-2           Weighted median   79 0.3870065
-3 Body mass index || id:ieu-a-2 Inverse variance weighted   79 0.4459091
-4 Body mass index || id:ieu-a-2               Simple mode   79 0.3401554
-5 Body mass index || id:ieu-a-2             Weighted mode   79 0.3888249
-          se         pval
-1 0.14396056 8.012590e-04
-2 0.07176578 6.943272e-08
-3 0.05898302 4.032020e-14
-4 0.15549366 3.169473e-02
-5 0.09979633 2.051634e-04</code></pre>
 </div>
 </div>
 </section>
@@ -908,30 +164,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3 class="anchored" data-anchor-id="obtaining-data-for-mrcml-paper">Obtaining Data for MRcML paper</h3>
 <p>Following instructions from Section S4.1 in Supplementary materials for MRcML paper to obtain the data used. The following is example code given where fasting proinsulin is the exposure and age at smoking is the outcome.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(TwoSampleMR)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ID of Fasting Proinsulin as exposure, ID of Age at Smoking as outcome </span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>exp_id <span class="ot">&lt;-</span> <span class="st">"ebi-a-GCST001212"</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>out_id <span class="ot">&lt;-</span> <span class="st">"ieu-a-964"</span></span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract IVs for exposure</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>exposure_dat <span class="ot">&lt;-</span> <span class="fu">extract_instruments</span>(exp_id)</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="co"># LD-clumping of extracted IVs</span></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>exposure_dat <span class="ot">&lt;-</span> <span class="fu">clump_data</span>(exposure_dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(TwoSampleMR)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ID of Fasting Proinsulin as exposure, ID of Age at Smoking as outcome </span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>exp_id <span class="ot">&lt;-</span> <span class="st">"ebi-a-GCST001212"</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>out_id <span class="ot">&lt;-</span> <span class="st">"ieu-a-964"</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract IVs for exposure</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>exposure_dat <span class="ot">&lt;-</span> <span class="fu">extract_instruments</span>(exp_id)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co"># LD-clumping of extracted IVs</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>exposure_dat <span class="ot">&lt;-</span> <span class="fu">clump_data</span>(exposure_dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Please look at vignettes for options on running this locally if you need to run many instances of this command.</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Clumping ebi-a-GCST001212, 8 variants, using EUR population reference</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract summary statistics of outcome, do not use proxy</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>outcome_dat <span class="ot">&lt;-</span> <span class="fu">extract_outcome_data</span>(exposure_dat<span class="sc">$</span>SNP, out_id, <span class="at">proxies =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract summary statistics of outcome, do not use proxy</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>outcome_dat <span class="ot">&lt;-</span> <span class="fu">extract_outcome_data</span>(exposure_dat<span class="sc">$</span>SNP, out_id, <span class="at">proxies =</span> <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Extracting data for 8 SNP(s) from 1 GWAS(s)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Harmonize data: correct strand for non-palindromic SNPs, drop all palindromic SNPs</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">harmonise_data</span>(exposure_dat, outcome_dat, <span class="at">action =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Harmonize data: correct strand for non-palindromic SNPs, drop all palindromic SNPs</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">harmonise_data</span>(exposure_dat, outcome_dat, <span class="at">action =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Harmonising Proinsulin levels || id:ebi-a-GCST001212 (ebi-a-GCST001212) and Age of smoking initiation || id:ieu-a-964 (ieu-a-964)</code></pre>
 </div>
@@ -939,13 +195,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>Removing the following SNPs for being palindromic:
 rs10501320, rs6235</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>final_dat <span class="ot">&lt;-</span> dat[dat<span class="sc">$</span>mr_keep,]</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Get final estimates and standard errors for exposure and outcome</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>b_exp <span class="ot">&lt;-</span> final_dat<span class="sc">$</span>beta.exposure</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>b_out <span class="ot">&lt;-</span> final_dat<span class="sc">$</span>beta.outcome</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>se_exp <span class="ot">&lt;-</span> final_dat<span class="sc">$</span>se.exposure</span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>se_out <span class="ot">&lt;-</span> final_dat<span class="sc">$</span>se.outcome</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>final_dat <span class="ot">&lt;-</span> dat[dat<span class="sc">$</span>mr_keep,]</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Get final estimates and standard errors for exposure and outcome</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>b_exp <span class="ot">&lt;-</span> final_dat<span class="sc">$</span>beta.exposure</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>b_out <span class="ot">&lt;-</span> final_dat<span class="sc">$</span>beta.outcome</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>se_exp <span class="ot">&lt;-</span> final_dat<span class="sc">$</span>se.exposure</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>se_out <span class="ot">&lt;-</span> final_dat<span class="sc">$</span>se.outcome</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="using-mrcml-method" class="level3">
@@ -953,8 +209,8 @@ rs10501320, rs6235</code></pre>
 <p>The MRcML package includes code in order to run the Mendelian randomization with constrained maximum likelihood (MRcML) methods.</p>
 <p>Here we follow the example here: https://github.com/xue-hr/MRcML for how to use the MRcML method using the given package. This example shows how to apply MRcML methods to make inference about the causal effect from <strong>Fast Glucose (FG)</strong> to <strong>Type-2 Diabetes (T2D)</strong>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MRcML)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(T2D_FG) <span class="co"># Data included in package for sake of example</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MRcML)</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(T2D_FG) <span class="co"># Data included in package for sake of example</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       Length Class  Mode   
 b_exp  17     -none- numeric
@@ -965,13 +221,13 @@ se_out 17     -none- numeric</code></pre>
 </div>
 <p>The example data <code>T2D_FG</code> is a list which contains estimated effect sizes and standard errors of 17 SNPs on T2D and FG. Next we perform the main function with sample size of FG which is 46186, and using 100 random start points. We set the random seed <code>random_seed = 1</code> to make sure results are replicable.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>cML_result <span class="ot">=</span> <span class="fu">mr_cML</span>(T2D_FG<span class="sc">$</span>b_exp,</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>                    T2D_FG<span class="sc">$</span>b_out, </span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>                    T2D_FG<span class="sc">$</span>se_exp,</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>                    T2D_FG<span class="sc">$</span>se_out,</span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">n =</span> <span class="dv">46186</span>,</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>                    <span class="at">random_start =</span> <span class="dv">100</span>, </span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>                    <span class="at">random_seed =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>cML_result <span class="ot">=</span> <span class="fu">mr_cML</span>(T2D_FG<span class="sc">$</span>b_exp,</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>                    T2D_FG<span class="sc">$</span>b_out, </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>                    T2D_FG<span class="sc">$</span>se_exp,</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>                    T2D_FG<span class="sc">$</span>se_out,</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">n =</span> <span class="dv">46186</span>,</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>                    <span class="at">random_start =</span> <span class="dv">100</span>, </span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>                    <span class="at">random_seed =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in cML_estimate_random(b_exp = b_exp, b_out = b_out, se_exp = se_exp, :
 May not converge to minimums with some given start points and maximum number of
@@ -984,7 +240,7 @@ result.</code></pre>
 <p>We get a warning message from the function <code>cML_estimate_random()</code>. The reason is: here we use 100 random starting points to minimize the non-convex loss function, some of them may not converge to a local minimum and result in Fisher Information matrices that are not positive definite. It is not likely affecting the optimization result, since in the end we only use the start point gives the minimum loss and discard all other start points including those that do not converge.</p>
 <p>Now lets take a look at the results:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>cML_result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>cML_result</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$MA_BIC_theta
 [1] 2.110808
@@ -1035,7 +291,7 @@ $AIC_invalid
 </div>
 </div>
 <p>The BIC selected model gives us indices of invalid IVs: 8, 12, 13, 15, and 17. The scatterplot below (image right now, change to code later) shows the invalid IVs marked in blue:</p>
-<p><img src="%22invalid_IV_BIC.png%22" class="img-fluid"></p>
+<p><img src="invalid_IV_BIC.png" class="img-fluid"></p>
 </section>
 
 </main>

@@ -71,6 +71,7 @@ summary(T2D_FG) # Data included in package for sake of example
 The example data `T2D_FG` is a list which contains estimated effect sizes and standard errors of 17 SNPs on T2D and FG. Next we perform the main function with sample size of FG which is 46186, and using 100 random start points. We set the random seed `random_seed = 1` to make sure results are replicable. 
 
 ```{r}
+#| warning: false
 cML_result = mr_cML(T2D_FG$b_exp,
                     T2D_FG$b_out, 
                     T2D_FG$se_exp,
@@ -89,6 +90,27 @@ cML_result
 The BIC selected model gives us indices of invalid IVs: 8, 12, 13, 15, and 17. The scatterplot below (image right now, change to code later) shows the invalid IVs marked in blue: 
 
 ![](invalid_IV_BIC.png)
+
+Now let us perform cML with data perturbation. The default number of perturbations is 200, and use we 10 random start points. In real applications, we recommend using more start points to get reliable results even if it takes more time -- like 10 or even 100. In simulations, the number of random start points could be set to 0 (i.e. no random start) to speed up results. 
+
+```{r}
+#| warning: false
+cML_result_DP <- mr_cML_DP(T2D_FG$b_exp,
+                           T2D_FG$b_out, 
+                           T2D_FG$se_exp,
+                           T2D_FG$se_out,
+                           n = 46186,
+                           random_start = 10, 
+                           random_start_pert = 10,
+                           random_seed = 1,
+                           num_pert = 200)
+```
+
+Results with data perturbation:
+
+```{r}
+cML_result_DP
+```
 
 
 
