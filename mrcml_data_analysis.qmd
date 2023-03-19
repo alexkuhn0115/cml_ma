@@ -4,6 +4,21 @@ author: "Alex Kuhn"
 format: html
 ---
 
+```{r}
+#| warning: false
+library(tidyverse)  
+library(TwoSampleMR)             # Read in GWAS data; MR-IVW, MR-Egger,
+                                 # MR-Weighted-Median, MR-Weighted-Mode, MR-RAPS
+library(MRcML)                   # MRcML
+library(cause)                   # CAUSE
+library(MendelianRandomization)  # MR-ContMix, MR-Lasso
+library(MRMix)                   # MR-Mix
+library(MRPRESSO)                # MR-PRESSO
+
+# Question: Are all of the above library calls necessary? Do any load in the 
+#           others automatically?
+```
+
 ### Plan
 Here we will first reproduce the results from the data analysis in the MRcML paper in order to identify possible causal effects of 12 risk factors on three cardiometabolic diseases - coronary artery disease (CAD), stroke, and type 2 diabetes (T2D) - plus asthma largely as a negative control. These 12 risk factors (and their corresponding GWASs) are LDL cholesterol, HDL cholesterol, triglycerides (TG), drinks per week (alcohol), ever regular smoker (smoke), body fat percentage (BF), birth weight (BW), body mass index (BMI),  height, fasting glucose (FG), systolic blood pressure (SBP), and diastolic blood pressure (DBP). See paper (pg. 9) for information on sample sizes. 
 
@@ -11,6 +26,9 @@ For each risk factor/exposure-disease/outcome pair, we used the set of LD-indepe
 
 ### Data Processing
 
+```{r}
+# Still a bit confused here... first task!
+```
 
 ### Possible Next Steps
 
