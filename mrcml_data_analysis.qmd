@@ -89,9 +89,10 @@ I missed this before, but each exposure/outcome mentioned in the section "Identi
 outcome_ids <- c("ebi-a-GCST005195", "ebi-a-GCST005838", "ebi-a-GCST005047", 
                  "ebi-a-GCST006862")
 
-# LDL, HDL, TG, alcohol, smoke(?), BF, 
+# LDL, HDL, TG, alcohol, smoke, BF, BW, BMI, height, FG, SBP, DBP
 exposure_ids <- c("ieu-a-300", "ieu-a-299", "ieu-a-302", "ieu-b-73", "ieu-b-24",
-                  "ieu-a-999", )
+                  "ieu-a-999", "ieu-a-1083", "ieu-a-2", "ieu-a-89", "ieu-b-4761",
+                  "ieu-b-38", "ieu-b-39")
 ```
 
 
