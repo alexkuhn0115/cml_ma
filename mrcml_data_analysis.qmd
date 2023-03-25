@@ -15,20 +15,85 @@ library(MendelianRandomization)  # MR-ContMix, MR-Lasso
 library(MRMix)                   # MR-Mix
 library(MRPRESSO)                # MR-PRESSO
 
-# Question: Are all of the above library calls necessary? Do any load in the 
-#           others automatically?
+# Load in own helper functions
+source("mrcml_functions.R")
 ```
 
 ### Plan
 Here we will first reproduce the results from the data analysis in the MRcML paper in order to identify possible causal effects of 12 risk factors on three cardiometabolic diseases - coronary artery disease (CAD), stroke, and type 2 diabetes (T2D) - plus asthma largely as a negative control. These 12 risk factors (and their corresponding GWASs) are LDL cholesterol, HDL cholesterol, triglycerides (TG), drinks per week (alcohol), ever regular smoker (smoke), body fat percentage (BF), birth weight (BW), body mass index (BMI),  height, fasting glucose (FG), systolic blood pressure (SBP), and diastolic blood pressure (DBP). See paper (pg. 9) for information on sample sizes. 
 
-For each risk factor/exposure-disease/outcome pair, we used the set of LD-independent SNPs as IVs as described in Morrison et al. using the groupings of (likely causal), correlated, unrelated, and non-causal. In particular, I would like to reproduce results to create Figure 8 and Figure 9 here (without running CAUSAL for now) adding perhaps MR-Lasso and MR-PRESSO results. 
+For each risk factor/exposure-disease/outcome pair, we used the set of LD-independent SNPs as IVs as described in Morrison et al. using the groupings of (likely causal), correlated, unrelated, and non-causal. 
+
+I will attempt here to reproduce results to create Figure 8 and Figure 9 (without running CAUSAL for now) adding perhaps MR-Lasso and MR-PRESSO results. 
 
 ### Data Processing
 
 ```{r}
 # Still a bit confused here... first task!
+
+
+
+# ID of Fasting Proinsulin (Fasting glucose; FG?) as exposure, 
+# ID of Age at Smoking as outcome 
+exp_id <- "ebi-a-GCST001212" # FG
+out_id <- "ieu-a-964"        # smoke
+
+# Extract IVs for exposure
+exposure_dat <- extract_instruments(exp_id)
+
+# LD-clumping of extracted IVs
+exposure_dat <- clump_data(exposure_dat)
+
+# Extract summary statistics of outcome, do not use proxy
+outcome_dat <- extract_outcome_data(exposure_dat$SNP, out_id, proxies = 0)
+
+# Harmonize data: correct strand for non-palindromic SNPs, drop all palindromic SNPs
+dat <- harmonise_data(exposure_dat, outcome_dat, action = 3)
+final_dat <- dat[dat$mr_keep,]
+
+# Get final estimates and standard errors for exposure and outcome
+b_exp <- final_dat$beta.exposure
+b_out <- final_dat$beta.outcome
+se_exp <- final_dat$se.exposure
+se_out <- final_dat$se.outcome
+
+# Compare to built in function TwoSampleMR
+# Looks like this does not do clumping, will proceed with own function
+# which I call: `exposure_outcome_processing`
+make_dat("ebi-a-GCST001212", "ieu-a-964", proxies = FALSE)
+
+# Own function 
+FG_smoke <- exposure_outcome_processing(exp_id = "ebi-a-GCST001212", 
+                                        out_id = "ieu-a-964")
+FG_smoke
+summary(FG_smoke)
 ```
+
+Now that I know the code above works, I need the ID for each exposure and outcome of interest. How do I know which data set to choose? For example, at the host website: https://gwas.mrcieu.ac.uk/ it appears that there are four different data sets for CAD. There is:
+
+  * ebi-a-GCST005195
+  * ebi-a-GCST005194
+  * bbj-a-159
+  * ebi-a-GCST003116
+  
+Do I default to a certain year? The one with the largest sample size? Something else?
+
+Answer from Haoran: 
+
+For choosing the GWAS dataset, I think I try to use the GWAS data which (1) has sample size as large as possible; (2) has enough SNPs, since some GWAS only has information for tens of thousands of SNPs, I think it should have at least a few millions; (3) the sample sizes for different SNPs (especially those significant ones which are used as IVs) are not too different; (4) maybe published in recent years on prestigious journals (this point is also likely to ensure the previous points). As described in the section "Identifying causal risk factors of complex diseases" of the main text, the CAD data was from "van der Harst, P., and Verweij, N. (2018). Identification of 64 Novel Genetic Loci Provides an Expanded View on the Genetic Architecture of Coronary Artery Disease. Circ. Res. 122, 433–443" with sample size 547261, so it should be ebi-a-GCST005195.
+
+I missed this before, but each exposure/outcome mentioned in the section "Identifying causal risk factors of complex diseases" of the main text has a citation alongside, so I can use the author to identify the correct dataset for reproducing results here. 
+
+```{r}
+# CAD, stroke, T2D, asthma
+outcome_ids <- c("ebi-a-GCST005195", "ebi-a-GCST005838", "ebi-a-GCST005047", 
+                 "ebi-a-GCST006862")
+
+# LDL, HDL, TG, alcohol, smoke(?), BF, 
+exposure_ids <- c("ieu-a-300", "ieu-a-299", "ieu-a-302", "ieu-b-73", "ieu-b-24",
+                  "ieu-a-999", )
+```
+
 
 ### Possible Next Steps
 
